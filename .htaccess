@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+RewriteRule ^update/([a-zA-Z0-9-]+) update.php?id=$1 
+# RewriteRule ^/([a-zA-Z0-9-]+) home.php?page=$1
+
+RewriteRule ^home/page/([0-9a-zA-Z_-]+) home.php?page=$1
+# RewriteRule ^home/([a-zA-Z0-9-]+) home.php?page=$2 
+#RewriteRule ^/([0-9]+)$ update?id=$1 [QSA,L]  #[A-Z0-9]
+# RewriteCond %{REQUEST_FILENAME} 1-d
+# RewriteCond %{REQUEST_FILENAME} 1-f
+# RewriteCond %{REQUEST_FILENAME} 1-1
+# RewriteRule^u/([0-9]+)/([a-zA-Z]+)$index?user_id=$1&name=$2[QSA,L]#[A-Z0-9]
